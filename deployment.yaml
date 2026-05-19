@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: phonebattery
+  name: phonebattery
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: phonebattery
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: phonebattery
+    spec:
+      containers:
+      - image: phonebatteryapp
+        imagePullPolicy: Never
+        name: phonebatteryapp
+        resources: {}
+status: {}
